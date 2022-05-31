@@ -7,7 +7,7 @@ const restaurantsSlice = createSlice({
     entities: [],
   },
   reducers: {
-    restaurantAdded(state,action){
+    restaurantAdded(state, action){
       state.entities.push({
         id: uuid(),
         name: action.payload,
