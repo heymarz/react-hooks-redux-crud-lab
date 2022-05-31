@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {reviewAdded} from "./reviewsSlice";
 import {useDispatch} from "react-redux"
 
-function ReviewInput({restuarantId}) {
+function ReviewInput({restaurantId}) {
   const [comment, setComment] = useState("");
   const dispatch = useDispatch();
 
@@ -12,7 +12,7 @@ function ReviewInput({restuarantId}) {
 
   function handleSubmit(e){
     e.preventDefault();
-    dispatch(reviewAdded({ comment, restuarantId }))
+    dispatch(reviewAdded({ comment, restaurantId }))
   };
 
   return (
